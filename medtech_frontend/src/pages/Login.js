@@ -1,20 +1,10 @@
 import React from "react";
+import "./Login.css";
 
 function Login() {
   return (
-    <div>
-      <h1>Login</h1>
-      <form>
-        <label>
-          Username: <input type="text" name="username" />
-        </label>
-        <br />
-        <label>
-          Password: <input type="password" name="password" />
-        </label>
-        <br />
-        <button type="submit">Login</button>
-      </form>
+    <div className="login">
+      <h3>Sign in to your account</h3>
     </div>
   );
 }

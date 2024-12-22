@@ -1,47 +1,275 @@
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Raleway", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: var(--default-font);
 }
 
 .home {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  color: rgb(44, 73, 100);
 }
 
 .bg-img {
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full viewport width */
   height: 100vh; /* Full viewport height */
   background-image: url("./images/bg.jpg");
   background-size: cover; /* Ensures the image covers the entire area */
   background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling of the image */
-  position: fixed; /* Keeps it fixed in place if scrolling */
+  background-repeat: no-repeat;
   z-index: -1; /* Sends it to the back */
+  overflow: hidden;
 }
 
 .bg-img-txt {
   color: white;
   text-align: left;
-  padding-top: 15%;
+  padding-top: 10%;
+}
+
+.bg-img-txt h1 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  margin-bottom: 2.5%;
+}
+
+.bg-img-txt p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5%;
 }
 
 .bg-img-txt div {
   width: 40%;
   margin-left: 2.5%;
-  padding-top: 2.5%;
   padding-bottom: 2.5%;
   padding-left: 2.5%;
   border-radius: 10px;
-  background-color: rgba(240, 248, 255, 0.231);
+  color: rgb(44, 73, 100);
 }
 
-/* Adjustments for smaller screens */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.section h2 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  color: rgb(44, 73, 100);
+  margin-bottom: 2.5%;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgb(44, 73, 100);
+}
+
+.section p {
+  font-size: 1.5rem;
+  color: rgb(44, 73, 100);
+  margin-bottom: 2.5%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 2%;
+  padding: 20px;
+}
+
+.about .left {
+  width: 40%; /* Adjust the width of the image container */
+}
+
+.about .left img {
+  width: 100%; /* Ensures the image fits the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+.about .right {
+  width: 55%; /* Adjust the width of the content */
+  text-align: left; /* Align the text to the left */
+}
+
+.about .right h2 {
+  font-size: 1.8rem; /* Adjust heading size */
+  margin-bottom: 10px;
+}
+
+.about .right p {
+  font-size: 1rem; /* Adjust paragraph size */
+  line-height: 1.5; /* Improve readability */
+  color: #333; /* Optional: text color */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 5%;
+}
+
+.contact-info {
+  width: 40%;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-item .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.info-item .icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.info-item .text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.info-item .text p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.contact-form {
+  width: 55%;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form .form-group input {
+  width: 48%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .about .left,
+  .about .right {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .about .left img {
+    max-width: 90%; /* Reduce image size slightly on smaller screens */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
 @media (max-width: 768px) {
   .bg-img {
-    background-size: contain; /* Ensures the image fits without cutting off important parts */
-    background-position: top center; /* Adjust position to show key content */
+    background-size: contain;
+    background-position: top center;
   }
 }

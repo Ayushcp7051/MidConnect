@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(44, 73, 100);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(50vh - 200px);
+  padding: 20px;
+  height: 450px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.login h1 {
+  margin: 20px;
+}
