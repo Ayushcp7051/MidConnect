@@ -60,11 +60,11 @@ function Home() {
             <img src="/images/about.jpg" alt="About Us" />
           </div>
           <div className="right">
-            <h3>MedTech</h3>
+            <h3>MedConnect</h3>
             <p>
-              MedTech is a comprehensive platform transforming Indian healthcare
-              with accessible, affordable solutions, empowering patients with
-              seamless care, consultations, and resources.
+              MedConnect is a comprehensive platform transforming Indian
+              healthcare with accessible, affordable solutions, empowering
+              patients with seamless care, consultations, and resources.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ function Home() {
               </div>
               <div class="text">
                 <h3>Location</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>MSRIT Banglore</p>
               </div>
             </div>
             <div class="info-item">
@@ -88,7 +88,7 @@ function Home() {
               </div>
               <div class="text">
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+91 1234567890</p>
               </div>
             </div>
             <div class="info-item">
@@ -97,7 +97,7 @@ function Home() {
               </div>
               <div class="text">
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>info@medconnect.com</p>
               </div>
             </div>
           </div>
